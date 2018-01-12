@@ -14,10 +14,10 @@ private const val ACTIVITY_AUTH = 1000
 abstract class SplashedActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.AppTheme_Base)
         if (!isAuthenticated()) {
             startActivityForResult(Intent(this, AuthActivity::class.java), ACTIVITY_AUTH)
         }
+        setTheme(R.style.AppTheme_Base)
         super.onCreate(savedInstanceState)
     }
 
